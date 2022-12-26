@@ -1,0 +1,81 @@
+canvas{
+    border: solid rgb(240, 100, 7);
+    border-width: 10px;
+    cursor:cross-hair;
+}
+cursor{
+    position: relative;
+}
+.fathercolor{
+    position:relative;
+    display:none;
+}
+/* .container{
+    width: 100%;
+    border: solid black;
+    box-shadow: 10px black;
+} */
+#pen{background-image: url(pen2.ico);}
+.icon{
+    height:30px;
+    width:30px;
+    margin: 0.2%;
+    border: groove black;
+    border-radius: 5px;
+    background-size: 30px 30px;
+    cursor: pointer;
+}
+.icon:hover{
+    height:31px;
+    width:31px;
+}
+.icon:active{
+    background-color: gray;
+
+}
+.currcolor{
+    width:80px;
+    height:40px;
+    border:transparent;
+    border-radius: 10px;
+}
+.colors{
+    width: 25px;
+    height:25px;
+    display:inline-block;
+    border: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+.selectcolor{
+    width: auto;
+    height:auto;
+    position:absolute;
+    z-index: 1;
+    overflow:visible;
+    display:none;
+}
+.undo,.redo,.clear{
+    margin:1px;
+    border: groove grey;
+    width:30px;
+    height:30px;
+    font-size: xx-large;
+    position: relative; 
+    cursor: pointer;
+    background-size: 30px 30px;
+    
+}
+.definetext{
+    display: none;
+    flex-direction: column;
+    position: relative;
+}
+.definetext2{
+    padding: 3px;
+    border: solid grey;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+}

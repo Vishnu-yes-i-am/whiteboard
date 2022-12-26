@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="board.css">
+</head>
+<body>
+    <!-- <div class="container"> -->
+    <div style="display: flex;">
+    <div class='icon' id='pen'></div>
+    <div class="fathercolor" ><div class='selectcolor'>
+        <input id="penwidth" type="number" value='3' style="width: 30px; height:30px;font-size: larger;" max="50">
+        <div class='colors'onclick="colorchange('red')" style="background-color: red;" ></div>
+        <div class='colors'onclick="colorchange('green')" style="background-color: green;" ></div>
+        <div class='colors'onclick="colorchange('blue')"  style="background-color: blue;"></div>
+        <div class='colors'onclick="colorchange('yellow')" style="background-color: yellow;" ></div>
+        <div class='colors'onclick="colorchange('black')" style="background-color: black;" ></div>
+        <div class='colors'onclick="colorchange('rgb(245, 60, 214)')" style="background-color: rgb(245, 60, 214);" ></div>
+        <div class='colors'onclick="colorchange('brown')" style="background-color: brown;" ></div>
+        <div class='colors'onclick="colorchange('rgb(240, 128, 128)')"  style="background-color: rgb(240, 128, 128);"></div>
+        <div class='colors'onclick="colorchange('blueviolet')" style="background-color: blueviolet;" ></div>
+        <div class='colors'onclick="colorchange('skyblue')" style="background-color: skyblue;" ></div>
+    </div></div>
+<div class="icon" onclick="colorchange('white')" style="background-image: url(erase.png);"></div>
+<div class="icon" id="stline" onclick="stldraw()" style="background-image: url(Ruler.ico);"></div>
+<div class="icon" id="circle" onclick="cirdraw()" style="background-image: url(circle.png);"></div>
+<div class="icon" id="addtext" onclick="text()" style="background-image: url(addtext.png);"></div>
+<div class='definetext' >
+    <div class='definetext2'>
+    <input class="text" style="width: 100px; height:30px;font-size: large;" placeholder="Enter Text" type="text">
+    <input class='fwidth' max="72" style="width: 30px; height:25px; display: inline-block;" placeholder="width" type="number">
+    <input class='xcord' style="width: 30px; height:25px; display: inline-block;" placeholder="X" type="number">
+    <input class="ycord" style="width: 30px; height:25px;display: inline-block;" placeholder="Y" type="number">
+        <button onclick="addtext()">Add</button></div>
+</div>
+<div class="currcolor"></div>
+<div class="unre" style="position: absolute;right: 0;display:flex;">
+<div class="clear" onclick="clearboard()" style="background-image: url(artist.png);"></div>
+<div class="undo" onclick="undo()">&#x21b6;</div>
+<div class="redo" onclick="redo()">&#x21b7;</div></div>
+</div>
+    <canvas class="mycanvas" id="mycanvas"></canvas>
+    <script src="board.js"></script>
+</body>
+</html>
